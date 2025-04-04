@@ -1,0 +1,1092 @@
+fileFormatVersion: 2
+guid: 7b36153640c75674588f8eb696ec97e9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9002847666273897121
+    second: groundTransparent_white_0
+  - first:
+      213: -340232003793039408
+    second: groundTransparent_white_1
+  - first:
+      213: 4674521658388337755
+    second: groundTransparent_white_2
+  - first:
+      213: 8829145461389292410
+    second: groundTransparent_white_3
+  - first:
+      213: -8729747735231205913
+    second: groundTransparent_white_4
+  - first:
+      213: 676853121739785293
+    second: groundTransparent_white_5
+  - first:
+      213: -5904390702244050718
+    second: groundTransparent_white_6
+  - first:
+      213: -8891171114390940420
+    second: groundTransparent_white_7
+  - first:
+      213: -8666351756952945738
+    second: groundTransparent_white_8
+  - first:
+      213: 4420331679932838752
+    second: groundTransparent_white_9
+  - first:
+      213: 7130811566939368825
+    second: groundTransparent_white_10
+  - first:
+      213: 1145514828751729472
+    second: groundTransparent_white_11
+  - first:
+      213: -7744641617174028945
+    second: groundTransparent_white_12
+  - first:
+      213: 3165721135641282161
+    second: groundTransparent_white_13
+  - first:
+      213: -8995816110704275013
+    second: groundTransparent_white_14
+  - first:
+      213: 4056517999690980244
+    second: groundTransparent_white_15
+  - first:
+      213: 6706039508189048702
+    second: groundTransparent_white_16
+  - first:
+      213: 3445211339784584062
+    second: groundTransparent_white_17
+  - first:
+      213: -4999559348205939754
+    second: groundTransparent_white_18
+  - first:
+      213: -5273471692626988346
+    second: groundTransparent_white_19
+  - first:
+      213: 9105739597787452286
+    second: groundTransparent_white_20
+  - first:
+      213: -4240898611915532423
+    second: groundTransparent_white_21
+  - first:
+      213: 5604741016803095815
+    second: groundTransparent_white_22
+  - first:
+      213: 241892873368192796
+    second: groundTransparent_white_23
+  - first:
+      213: 7764824678959174130
+    second: groundTransparent_white_24
+  - first:
+      213: 7212283549344641099
+    second: groundTransparent_white_25
+  - first:
+      213: -7425653917787054156
+    second: groundTransparent_white_26
+  - first:
+      213: 17497485808382658
+    second: groundTransparent_white_27
+  - first:
+      213: 273785476440449004
+    second: groundTransparent_white_28
+  - first:
+      213: -4265487066285182399
+    second: groundTransparent_white_29
+  - first:
+      213: -1924182103207843209
+    second: groundTransparent_white_30
+  - first:
+      213: 5588328182589720291
+    second: groundTransparent_white_31
+  - first:
+      213: -7633218867955313594
+    second: groundTransparent_white_32
+  - first:
+      213: 8581744795179289439
+    second: groundTransparent_white_33
+  - first:
+      213: 5477902583530568263
+    second: groundTransparent_white_34
+  - first:
+      213: 1855796439885988538
+    second: groundTransparent_white_35
+  - first:
+      213: -3438198758491888185
+    second: groundTransparent_white_36
+  - first:
+      213: -6320762973883014169
+    second: groundTransparent_white_37
+  - first:
+      213: 7781786258310882548
+    second: groundTransparent_white_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: groundTransparent_white_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 775
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f553ac42fb57f0380800000000000000
+      internalID: -9002847666273897121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_1
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 903
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df42b09bc0474bf0800000000000000
+      internalID: -340232003793039408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_2
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 839
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b545b1f7eac3fd040800000000000000
+      internalID: 4674521658388337755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_3
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 903
+        width: 68
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a737c50b40d678a70800000000000000
+      internalID: 8829145461389292410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_4
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 967
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ede5cedfa4b9d680800000000000000
+      internalID: -8729747735231205913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_5
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 923
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d440a6ef35aa46900800000000000000
+      internalID: 676853121739785293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_6
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 903
+        width: 57
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8cf9960f36f0ea0800000000000000
+      internalID: -5904390702244050718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_7
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 857
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf493899af63c9480800000000000000
+      internalID: -8891171114390940420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_8
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 775
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bbbc3c4efeeab780800000000000000
+      internalID: -8666351756952945738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_9
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 798
+        width: 114
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0637dc33e3c285d30800000000000000
+      internalID: 4420331679932838752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_10
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 775
+        width: 50
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97deaa7e65bb5f260800000000000000
+      internalID: 7130811566939368825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_11
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 791
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04370b4eaafa5ef00800000000000000
+      internalID: 1145514828751729472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_12
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 767
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d92a76b71858490800000000000000
+      internalID: -7744641617174028945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_13
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 767
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17648d3a996eeeb20800000000000000
+      internalID: 3165721135641282161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_14
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 767
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb15cb0c8e0782380800000000000000
+      internalID: -8995816110704275013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 703
+        width: 129
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b1f8cd0a5ab4830800000000000000
+      internalID: 4056517999690980244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 693
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fe75f0763a01d50800000000000000
+      internalID: 6706039508189048702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_17
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 72
+        width: 506
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7bf104c579dfcf20800000000000000
+      internalID: 3445211339784584062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_18
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 575
+        width: 306
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d393b8f24ffd9ab0800000000000000
+      internalID: -4999559348205939754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_19
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 71
+        width: 314
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c2f3e38f6dd0d6b0800000000000000
+      internalID: -5273471692626988346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_20
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 639
+        width: 65
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73545f7be51e5e70800000000000000
+      internalID: 9105739597787452286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 639
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 977d3548e2d4525c0800000000000000
+      internalID: -4240898611915532423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_22
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 263
+        width: 306
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7053c94724a08cd40800000000000000
+      internalID: 5604741016803095815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 25
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c174fc669406b5300800000000000000
+      internalID: 241892873368192796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_24
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 63
+        width: 26
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f15c8cd7e232cb60800000000000000
+      internalID: 7764824678959174130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_25
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 103
+        width: 306
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40b4120dad271460800000000000000
+      internalID: 7212283549344641099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_26
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 10
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf9055ca17c2f890800000000000000
+      internalID: -7425653917787054156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_27
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 10
+        width: 19
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c23212eed92e3000800000000000000
+      internalID: 17497485808382658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_28
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 10
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cefd4e3b07eacc300800000000000000
+      internalID: 273785476440449004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_29
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 10
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1427c0cdc12fdc4c0800000000000000
+      internalID: -4265487066285182399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_30
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 10
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ae127629eeb45e0800000000000000
+      internalID: -1924182103207843209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_31
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 10
+        width: 32
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e68093bfdabd8d40800000000000000
+      internalID: 5588328182589720291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_32
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 10
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 644d6b2d1eb511690800000000000000
+      internalID: -7633218867955313594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_33
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 10
+        width: 32
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5b08b55c6b781770800000000000000
+      internalID: 8581744795179289439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_34
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 10
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ab885606b650c40800000000000000
+      internalID: 5477902583530568263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_35
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 10
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2c6d6970d11c910800000000000000
+      internalID: 1855796439885988538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_36
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 6
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5e6ec02701940d0800000000000000
+      internalID: -3438198758491888185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_37
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 6
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3e24860932848a0800000000000000
+      internalID: -6320762973883014169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundTransparent_white_38
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 7
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4e2ac4f557efb60800000000000000
+      internalID: 7781786258310882548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
