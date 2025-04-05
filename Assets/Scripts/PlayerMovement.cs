@@ -8,11 +8,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float kickRange = 1f;
     GameObject ball;
     Rigidbody2D rb;
+    Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         ball = GameObject.FindWithTag("Ball");
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -20,6 +22,15 @@ public class PlayerMovement : MonoBehaviour
         Vector2 moveDirection = joystick.Direction;
 
         rb.linearVelocity = moveDirection * speed;
+
+        if (moveDirection != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
+
+        bool isRunning = moveDirection != Vector2.zero;
+        animator.SetBool("isRunning", isRunning);
     }
 
     public void KickBall()
