@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isDribbling)
         {
-            Vector2 dribbleDirection = moveDirection.normalized;
+            Vector2 dribbleDirection = moveDirection != Vector2.zero ? moveDirection.normalized : lastDirection.normalized;
             dribbleOffset = isSprinting ? 0.4f : 0.2f;
             dribbleRange = isSprinting ? 0.4f : 0.3f;
             Vector2 targetBallPos = playerPos + dribbleDirection * (dribbleRange + dribbleOffset);
