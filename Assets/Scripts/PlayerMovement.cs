@@ -10,16 +10,20 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float kickForce = 10f;
     [SerializeField] float kickRange = 1f;
     [SerializeField] float dribbleRange = 0.5f;
+    [SerializeField] float dribbleOffset = 0.1f;
     [SerializeField] Button sprintButton;
     GameObject ball;
     Rigidbody2D playerRb;
     Rigidbody2D ballRb;
     Animator animator;
     Vector2 moveDirection;
+    Vector2 lastDirection = Vector2.right;
     bool isDribbling = false;
     bool isSprinting = false;
     bool justKicked = false;
-    Vector2 lastDirection = Vector2.right;
+    float kickCooldown = 0.2f;
+    float lastKickTime = -1f;
+    float currentSpeed;
 
     void Start()
     {
@@ -31,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             ballRb = ball.GetComponent<Rigidbody2D>();
             if (ballRb != null)
             {
-                ballRb.bodyType = RigidbodyType2D.Kinematic;
+                ballRb.bodyType = RigidbodyType2D.Dynamic;
                 ballRb.linearDamping = 2f;
                 ballRb.angularDamping = 1f;
             }
@@ -40,39 +44,20 @@ public class PlayerMovement : MonoBehaviour
                 Debug.LogError("Ball has no Rigidbody2D!");
             }
         }
+
+        if (sprintButton != null)
+        {
+            sprintButton.onClick.AddListener(() => isSprinting = true);
+        }
     }
 
     void Update()
     {
-        if (ball != null && ballRb != null)
-        {
-            float currentDribbleRange = isSprinting ? dribbleRange * 1.5f : dribbleRange;
-            float distance = Vector2.Distance(transform.position, ball.transform.position);
-
-            if (distance <= currentDribbleRange && !isDribbling && !justKicked)
-            {
-                isDribbling = true;
-            }
-            else if (distance > currentDribbleRange && isDribbling)
-            {
-                isDribbling = false;
-                ballRb.bodyType = RigidbodyType2D.Dynamic;
-            }
-
-            if (ballRb.bodyType == RigidbodyType2D.Dynamic)
-            {
-                Vector2 velocity = ballRb.linearVelocity;
-                float rollSpeed = velocity.magnitude * 200f;
-                ball.transform.Rotate(0, 0, rollSpeed * Time.deltaTime * (velocity.x > 0 ? -1 : 1));
-            }
-        }
-
-        isSprinting = (sprintButton != null && EventSystem.current.currentSelectedGameObject == sprintButton.gameObject) || Input.GetKey(KeyCode.LeftShift);
-
-        if (justKicked) justKicked = false;
+        MovePlayer();
+        HandleDribbling();
     }
 
-    void FixedUpdate()
+    private void MovePlayer()
     {
         moveDirection = joystick.Direction;
         if (moveDirection.magnitude < 0.1f) moveDirection = Vector2.zero;
@@ -80,37 +65,60 @@ public class PlayerMovement : MonoBehaviour
         if (moveDirection != Vector2.zero)
         {
             lastDirection = moveDirection.normalized;
-            float currentSpeed = isSprinting ? sprintSpeed : speed;
-            playerRb.linearVelocity = moveDirection * currentSpeed;
+            currentSpeed = isSprinting ? sprintSpeed : speed;
+            Vector2 newPosition = playerRb.position + moveDirection * currentSpeed * Time.deltaTime;
+            playerRb.MovePosition(newPosition);
 
             float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle);
-
-            if (isDribbling && ball != null && ballRb != null && !justKicked)
-            {
-                float rollSpeed = moveDirection.magnitude * currentSpeed * 200f;
-                ball.transform.Rotate(0, 0, rollSpeed * Time.fixedDeltaTime * (moveDirection.x > 0 ? -1 : 1));
-            }
         }
-        else
+
+        isSprinting = Input.GetKey(KeyCode.LeftShift) || (sprintButton != null && isSprinting);
+        if (Input.GetKeyUp(KeyCode.LeftShift) || (sprintButton != null && !sprintButton.interactable))
         {
-            playerRb.linearVelocity = Vector2.zero;
+            isSprinting = false;
         }
 
         animator.SetBool("isRunning", moveDirection != Vector2.zero);
+        if (justKicked) justKicked = false;
+    }
 
-        if (isDribbling && ball != null && ballRb != null && !justKicked)
+    private void HandleDribbling()
+    {
+        if (ball == null || ballRb == null) return;
+
+        Vector2 ballPos = ball.transform.position;
+        Vector2 playerPos = transform.position;
+        float distance = Vector2.Distance(playerPos, ballPos);
+
+        if (distance <= dribbleRange && moveDirection != Vector2.zero && !justKicked)
         {
-            float dribbleOffset = isSprinting ? 0.6f : 0.5f;
-            Vector2 targetPos = (Vector2)transform.position + lastDirection * dribbleOffset;
-            ballRb.bodyType = RigidbodyType2D.Kinematic;
-            ball.transform.position = targetPos;
+            isDribbling = true;
+        }
+
+        if (isDribbling)
+        {
+            Vector2 dribbleDirection = moveDirection.normalized;
+            dribbleOffset = isSprinting ? 0.4f : 0.2f;
+            dribbleRange = isSprinting ? 0.4f : 0.3f;
+            Vector2 targetBallPos = playerPos + dribbleDirection * (dribbleRange + dribbleOffset);
+
+            ballRb.position = Vector2.Lerp(ballPos, targetBallPos, Time.deltaTime * 15f);
             ballRb.linearVelocity = Vector2.zero;
+            ballRb.angularVelocity = 0f;
+
+            distance = Vector2.Distance(playerPos, ballRb.position);
+
+            if (distance > dribbleRange * 2f || moveDirection == Vector2.zero)
+            {
+                isDribbling = false;
+            }
         }
     }
 
     public void KickBall()
     {
+        if (Time.time - lastKickTime < kickCooldown) return;
         if (ball == null || ballRb == null)
         {
             Debug.Log("Ball or Rigidbody2D is null!");
@@ -124,12 +132,12 @@ public class PlayerMovement : MonoBehaviour
         if (distance <= kickRange)
         {
             Debug.Log("Kick Start");
-            isDribbling = false;
+            isDribbling = false; // Hentikan dribbling saat menendang
             justKicked = true;
-            ballRb.bodyType = RigidbodyType2D.Dynamic;
             Vector2 kickDirection = joystick.Direction != Vector2.zero ? joystick.Direction.normalized : lastDirection.normalized;
             ballRb.linearVelocity = Vector2.zero;
             ballRb.AddForce(kickDirection * kickForce, ForceMode2D.Impulse);
+            lastKickTime = Time.time;
             Debug.Log("Kick Applied, Direction: " + kickDirection + ", Force: " + kickForce + ", Velocity: " + ballRb.linearVelocity);
         }
         else
