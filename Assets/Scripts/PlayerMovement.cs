@@ -11,7 +11,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float kickRange = 1f;
     [SerializeField] float dribbleRange = 0.5f;
     [SerializeField] float dribbleOffset = 0.1f;
+    [SerializeField] float passForce = 8f;
     [SerializeField] Button sprintButton;
+    [SerializeField] Button passButton;
     GameObject ball;
     Rigidbody2D playerRb;
     Rigidbody2D ballRb;
@@ -24,6 +26,9 @@ public class PlayerMovement : MonoBehaviour
     float kickCooldown = 0.2f;
     float lastKickTime = -1f;
     float currentSpeed;
+
+    TeammateAI[] teammates;
+    PlayerMovement currentPlayer;
 
     void Start()
     {
@@ -49,12 +54,21 @@ public class PlayerMovement : MonoBehaviour
         {
             sprintButton.onClick.AddListener(() => isSprinting = true);
         }
+
+        if (passButton != null)
+        {
+            passButton.onClick.AddListener(PassBall);
+        }
+
+        teammates = FindObjectsOfType<TeammateAI>();
+        currentPlayer = this;
     }
 
     void Update()
     {
         MovePlayer();
         HandleDribbling();
+        UpdateTeammates();
     }
 
     private void MovePlayer()
@@ -114,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
                 isDribbling = false;
             }
         }
+
     }
 
     public void KickBall()
@@ -144,5 +159,94 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Kick failed, distance too far: " + distance);
         }
+    }
+
+    void UpdateTeammates()
+    {
+        if (isDribbling)
+        {
+            foreach (var teammate in teammates)
+            {
+                teammate.SetPlayerWithBall(transform); // Beri tahu teammate siapa yang pegang bola
+            }
+        }
+        else
+        {
+            foreach (var teammate in teammates)
+            {
+                teammate.SetPlayerWithBall(null); // Hentikan AI jika tidak ada yang dribble
+            }
+        }
+    }
+
+    public void PassBall()
+    {
+        if (Time.time - lastKickTime < kickCooldown) return;
+        if (ball == null || ballRb == null) return;
+
+        // Cari teammate terdekat yang meminta umpan
+        TeammateAI target = null;
+        float minDistance = float.MaxValue;
+        foreach (var teammate in teammates)
+        {
+            float distance = Vector2.Distance(transform.position, teammate.transform.position);
+            if (distance < minDistance && !Physics2D.Raycast(transform.position, (teammate.transform.position - transform.position).normalized, distance, LayerMask.GetMask("Opponent")))
+            {
+                minDistance = distance;
+                target = teammate;
+            }
+        }
+
+        if (target != null)
+        {
+            isDribbling = false;
+            justKicked = true;
+            Vector2 passDirection = (target.transform.position - transform.position).normalized;
+            ballRb.linearVelocity = Vector2.zero;
+            ballRb.AddForce(passDirection * passForce, ForceMode2D.Impulse);
+            lastKickTime = Time.time;
+
+            // Ganti kontrol ke teammate
+            SwitchControlToTeammate(target);
+        }
+    }
+
+    void SwitchControlToTeammate(TeammateAI target)
+    {
+        // Nonaktifkan PlayerMovement di pemain saat ini
+        PlayerMovement currentPlayer = GetComponent<PlayerMovement>();
+        currentPlayer.enabled = false;
+
+        // Aktifkan TeammateAI di pemain saat ini (jadikan AI)
+        TeammateAI currentAI = gameObject.GetComponent<TeammateAI>();
+        if (currentAI == null)
+        {
+            currentAI = gameObject.AddComponent<TeammateAI>();
+        }
+        currentAI.enabled = true;
+
+        // Aktifkan PlayerMovement di target
+        PlayerMovement targetPlayer = target.GetComponent<PlayerMovement>();
+        if (targetPlayer == null)
+        {
+            targetPlayer = target.gameObject.AddComponent<PlayerMovement>();
+            targetPlayer.joystick = joystick;
+            targetPlayer.speed = speed;
+            targetPlayer.sprintSpeed = sprintSpeed;
+            targetPlayer.kickForce = kickForce;
+            targetPlayer.kickRange = kickRange;
+            targetPlayer.dribbleRange = dribbleRange;
+            targetPlayer.dribbleOffset = dribbleOffset;
+            targetPlayer.passForce = passForce;
+            targetPlayer.sprintButton = sprintButton;
+            targetPlayer.passButton = passButton;
+        }
+        targetPlayer.enabled = true;
+
+        // Nonaktifkan TeammateAI di target
+        target.enabled = false;
+
+        // Perbarui referensi teammates
+        teammates = FindObjectsOfType<TeammateAI>();
     }
 }
